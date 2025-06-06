@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style>
          :root {
             --red: #FF4655;
@@ -13,13 +14,13 @@
     <title>Riot Games | Valorant - KillJoy</title>
 </head>
 
-<body>
-    <header>
-        <div>
+<body class="bg-[var(--color-bg)]">
+    <header class="w-full bg-[var(--red)] flex h-24">
+        <div class="flex">
             <img src="./assets/logo-riot.svg" alt="Logo Riot">
             <img src="./assets/logo-valorant.svg" alt="Logo Valorant">
         </div>
-        <menu>
+        <menu class="flex">
             <li>Game</li>
             <li>CHAMPION</li>
             <li>DISCOVER</li>
