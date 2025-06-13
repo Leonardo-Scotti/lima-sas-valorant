@@ -6,22 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
          :root {
+            --font-titulo: 220px;
+            --font-poppins: "Poppins", sans-serif;
             --red: #FF4655;
             --color-bg: #0F1923;
+        }
+        
+        .font-poppins {
+            font-family: "Poppins", sans-serif;
+        }
+        
+        .font-titulo {
+            font-family: "Zuume", sans-serif;
+        }
+        
+        .bg-button {
+            opacity: 0;
+            transition: .3s;
+        }
+        
+        .button:hover .bg-button {
+            opacity: 100%;
         }
     </style>
     <title>Riot Games | Valorant - KillJoy</title>
 </head>
 
-<body class="bg-[var(--color-bg)]">
-    <header class="bg-[var(--red)] w-full h-24 flex justify-center items-center">
-        <div class="flex">
+<body class="bg-[var(--color-bg)] flex flex-col h-screen">
+    <header class="bg-[var(--red)] 2xl:w-full 2xl:h-28 flex justify-between items-center font-poppins 2xl:font-bold 2xl:px-16 2xl:gap-64 md:flex-col">
+        <div class="logo flex gap-8">
             <img src="./assets/logo-riot.svg" alt="Logo Riot">
+            <div class="2xl:w-1 2xl:h-16 bg-black rounded-2xl"></div>
             <img src="./assets/logo-valorant.svg" alt="Logo Valorant">
         </div>
-        <menu class="flex">
-            <li>Game</li>
+        <menu class="grow flex 2xl:gap-9">
+            <li>GAME</li>
             <li>CHAMPION</li>
             <li>DISCOVER</li>
             <li>PATCH NOTES</li>
@@ -30,8 +51,95 @@
             <li>SUPORT</li>
         </menu>
     </header>
-    <main></main>
-    <footer></footer>
+    <main class="grow bg-[url(/assets/bg-main.png)] bg-no-repeat grid 2xl:grid-cols-3">
+        <div class="descricao-main 2xl:px-16 2xl:w-[600px] flex flex-col 2xl:mt-16">
+            <div class="titulo 2xl:h-fit">
+                <h1 class="text-(--red) font-extrabold text-(length:--font-titulo) font-titulo leading-none">KILLJOY</h1>
+                <p class="text-white font-titulo font-extrabold 2xl:text-5xl absolute 2xl:top-82 2xl:left-96 2xl:ml-4">SENTINEL</p>
+            </div>
+            <div class="descricao text-white font-poppins 2xl:text-base flex flex-col">
+                <h2 class="font-titulo font-extrabold 2xl:text-5xl">BIO...</h2>
+                <div class="font-poppins text-descricao flex flex-col 2xl:gap-11 2xl:font-normal">
+                    <p>
+                        Killjoy, uma alemã genial, defende o campo de batalha facilmente usando seu arsenal de invenções. Se o dano causado por seu equipamento não der cabo dos inimigos, os efeitos negativos de seus queridos robôs dão conta do recado.
+                    </p>
+                    <div>
+                        <p>
+                            Killjoy, a German genius, defends the field battle easily using your arsenal of inventions. If the damage caused by your
+                        </p>
+                        <p>
+                            Equipment doesn't kill enemies, negative effects of your dear robots errand account.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="button flex justify-center items-center 2xl:mb-20">
+            <div class="bg-button 2xl:w-[200px] 2xl:h-[60px] bg-[var(--red)] absolute 2xl:right-[864px] 2xl:top-[522px]"></div>
+            <h3 class="text-button text-white font-titulo font-semibold 2xl:text-4xl border-2 border-solid 2xl:px-12 2xl:py-2 z-10">JOIN NOW</h3>
+        </div>
+        <img src="./assets/character-killjoy.png" alt="Personagem KillJoy" class="2xl:w-[648px] 2xl:h-[945px] absolute 2xl:left-[1170px] 2xl:top-[68px] 2xl:z-999">
+        <img src="./assets/logo-main-content.svg" alt="Texto Valorant" class="absolute 2xl:left-[1800px] 2xl:top-[300px]">
+        <div class="cards 2xl:w-[872px] 2xl:h-[120px] absolute 2xl:top-[900px] 2xl:left-[64px] flex justify-center items-center 2xl:gap-8">
+            <div class="card 2xl:w-[260px] 2xl:h-[116px] bg-white flex justify-between items-center 2xl:p-3 z-50">
+                <div class="card-front 2xl:w-[260px] 2xl:h-[116px] border-2 border-solid border-[var(--red)] flex justify-between items-center 2xl:p-3 2xl:z-50 absolute 2xl:top-2 2xl:left-2">
+                    <img src="./assets/viper.png" alt="Viper" class="2xl:size-[80px] relative 2xl:-left-5">
+                    <div class="card-descricao 2xl:w-32">
+                        <h4 class="font-titulo">VALORANT PATCH NOTES 3.03</h4>
+                        <p class="font-poppins font-normal 2xl:text-[10px]">Hey! Let’s start with a quick note on Yoru from our Character Producer, John Goscicki:</p>
+                        <div class="card-footer flex justify-center items-center 2xl:gap-8">
+                            <div class="social flex justify-center items-center 2xl:gap-3">
+                                <img src="./assets/iconmonstr-reddit-1.svg" alt="Reddit" class="2xl:size-4">
+                                <img src="./assets/iconmonstr-twitter-1.svg" alt="Twitter" class="2xl:size-4">
+                            </div>
+                            <div class="see-more flex justify-center items-center font-titulo 2xl:text-base">
+                                <h5 class="">SEE MORE</h5>
+                                <span class="text-[var(--red)]">+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card 2xl:w-[260px] 2xl:h-[116px] bg-white flex justify-between items-center 2xl:p-3 2xl:z-50">
+                <div class="card-front 2xl:w-[260px] 2xl:h-[116px] border-2 border-solid border-[var(--red)] flex justify-between items-center 2xl:p-3 2xl:z-50 absolute 2xl:top-2 2xl:left-75">
+                    <img src="./assets/raze.png" alt="Viper" class="2xl:size-[80px] relative 2xl:-left-5">
+                    <div class="card-descricao 2xl:w-32">
+                        <h4 class="font-titulo">VALORANT PATCH NOTES 3.02</h4>
+                        <p class="font-poppins font-normal 2xl:text-[10px]">More bug fixes in this patch while we continue to evaluate those large Episode 3</p>
+                        <div class="card-footer flex justify-center items-center 2xl:gap-8">
+                            <div class="social flex justify-center items-center 2xl:gap-3">
+                                <img src="./assets/iconmonstr-reddit-1.svg" alt="Reddit" class="2xl:size-4">
+                                <img src="./assets/iconmonstr-twitter-1.svg" alt="Twitter" class="2xl:size-4">
+                            </div>
+                            <div class="see-more flex justify-center items-center font-titulo 2xl:text-base">
+                                <h5 class="">SEE MORE</h5>
+                                <span class="text-[var(--red)]">+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card 2xl:w-[260px] 2xl:h-[116px] bg-white flex justify-between items-center 2xl:p-3 2xl:z-50">
+                <div class="card-front 2xl:w-[260px] 2xl:h-[116px] border-2 border-solid border-[var(--red)] flex justify-between items-center 2xl:p-3 2xl:z-50 absolute 2xl:top-2 2xl:left-[592px]">
+                    <img src="./assets/kayo.png" alt="Viper" class="2xl:size-[80px] relative 2xl:-left-5">
+                    <div class="card-descricao 2xl:w-32">
+                        <h4 class="font-titulo">VALORANT PATCH NOTES 3.01</h4>
+                        <p class="font-poppins font-normal 2xl:text-[10px]">Patch 3.0 was like an over-sized meal, where now we sit and let the food settle.</p>
+                        <div class="card-footer flex justify-center items-center 2xl:gap-8">
+                            <div class="social flex justify-center items-center 2xl:gap-3">
+                                <img src="./assets/iconmonstr-reddit-1.svg" alt="Reddit" class="2xl:size-4">
+                                <img src="./assets/iconmonstr-twitter-1.svg" alt="Twitter" class="2xl:size-4">
+                            </div>
+                            <div class="see-more flex justify-center items-center font-titulo 2xl:text-base">
+                                <h5 class="">SEE MORE</h5>
+                                <span class="text-[var(--red)]">+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 
 </html>
