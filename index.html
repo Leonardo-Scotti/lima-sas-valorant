@@ -8,10 +8,11 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
          :root {
-            --font-titulo: 220px;
             --font-poppins: "Poppins", sans-serif;
             --red: #FF4655;
             --color-bg: #0F1923;
+            --tam-80: 80%;
+            --cols-tablet: 2fr 1fr;
         }
         
         .font-poppins {
@@ -37,29 +38,31 @@
 <body class="bg-[var(--color-bg)] flex flex-col h-screen">
     <header class="bg-[var(--red)] 2xl:w-full 2xl:h-28 flex justify-between items-center font-poppins 2xl:font-bold 2xl:px-16 2xl:gap-64 md:flex-col">
         <div class="logo flex 2xl:gap-8 md:h-16 md:gap-5 md:justify-center md:items-center">
-            <img src="./assets/logo-riot.svg" alt="Logo Riot">
+            <img src="./assets/logo-riot.svg" alt="Logo Riot" class="md:w-[94px]">
             <div class="w-1 2xl:h-16 bg-black rounded-2xl md:h-10"></div>
-            <img src="./assets/logo-valorant.svg" alt="Logo Valorant">
+            <img src="./assets/logo-valorant.svg" alt="Logo Valorant" class="md:w-9">
         </div>
-        <menu class="grow flex 2xl:gap-9 md:h-11 md:justify-center md:items-center">
-            <li>GAME</li>
-            <li>CHAMPION</li>
-            <li>DISCOVER</li>
-            <li>PATCH NOTES</li>
-            <li>E-SPORTS</li>
-            <li>SHOP</li>
-            <li>SUPORT</li>
-        </menu>
+        <nav class="md:w-screen md:border-t md:border-solid md:border-black flex justify-center">
+            <menu class="2xl:grow flex 2xl:gap-9  md:w-8/10 md:h-11 md:justify-around md:items-center font-bold md:text-[14px]">
+                <li>GAME</li>
+                <li>CHAMPION</li>
+                <li>DISCOVER</li>
+                <li>PATCH NOTES</li>
+                <li>E-SPORTS</li>
+                <li>SHOP</li>
+                <li>SUPORT</li>
+            </menu>
+        </nav>
     </header>
-    <main class="grow bg-[url(/assets/bg-main.png)] bg-no-repeat grid 2xl:grid-cols-3">
+    <main class="grow bg-[url(/assets/bg-main.png)] bg-no-repeat grid 2xl:grid-cols-3 md:bg-bottom md:grid-cols-[1fr_1fr] md:py-60 md:px-10">
         <div class="descricao-main 2xl:px-16 2xl:w-[600px] flex flex-col 2xl:mt-16">
             <div class="titulo 2xl:h-fit">
-                <h1 class="text-(--red) font-extrabold text-(length:--font-titulo) font-titulo leading-none">KILLJOY</h1>
-                <p class="text-white font-titulo font-extrabold 2xl:text-5xl absolute 2xl:top-82 2xl:left-96 2xl:ml-4">SENTINEL</p>
+                <h1 class="text-(--red) font-extrabold 2xl:text-[220px] md:text-[200px] font-titulo leading-none">KILLJOY</h1>
+                <p class="text-white font-titulo font-extrabold text-5xl absolute 2xl:top-82 2xl:left-96 2xl:ml-4 md:top-122 md:left-86">SENTINEL</p>
             </div>
-            <div class="descricao text-white font-poppins 2xl:text-base flex flex-col">
-                <h2 class="font-titulo font-extrabold 2xl:text-5xl">BIO...</h2>
-                <div class="font-poppins text-descricao flex flex-col 2xl:gap-11 2xl:font-normal">
+            <div class="descricao text-white font-poppins text-base flex flex-col">
+                <h2 class="font-titulo font-extrabold text-5xl">BIO...</h2>
+                <div class="font-poppins text-descricao flex flex-col 2xl:gap-11 md:gap-6 font-normal md:text-xl">
                     <p>
                         Killjoy, uma alemã genial, defende o campo de batalha facilmente usando seu arsenal de invenções. Se o dano causado por seu equipamento não der cabo dos inimigos, os efeitos negativos de seus queridos robôs dão conta do recado.
                     </p>
@@ -74,13 +77,13 @@
                 </div>
             </div>
         </div>
-        <div class="button flex justify-center items-center 2xl:mb-20">
-            <div class="bg-button 2xl:w-[200px] 2xl:h-[60px] bg-[var(--red)] absolute 2xl:right-[864px] 2xl:top-[522px]"></div>
-            <h3 class="text-button text-white font-titulo font-semibold 2xl:text-4xl border-2 border-solid 2xl:px-12 2xl:py-2 z-10">JOIN NOW</h3>
+        <div class="button flex justify-center items-center 2xl:mb-20 md:absolute md:top-254 md:left-34">
+            <div class="bg-button w-[200px] h-[60px] bg-[var(--red)] absolute 2xl:right-[864px] 2xl:top-[522px] md:-top-2 md:-left-2"></div>
+            <h3 class="text-button text-white font-titulo font-semibold text-4xl border-2 border-solid px-12 py-2 z-10">JOIN NOW</h3>
         </div>
-        <img src="./assets/character-killjoy.png" alt="Personagem KillJoy" class="2xl:w-[648px] 2xl:h-[945px] absolute 2xl:left-[1170px] 2xl:top-[68px] 2xl:z-999">
-        <img src="./assets/logo-main-content.svg" alt="Texto Valorant" class="absolute 2xl:left-[1800px] 2xl:top-[300px]">
-        <div class="cards 2xl:w-[872px] 2xl:h-[120px] absolute 2xl:top-[900px] 2xl:left-[64px] flex justify-center items-center 2xl:gap-8">
+        <img src="./assets/character-killjoy.png" alt="Personagem KillJoy" class="2xl:w-[648px] 2xl:h-[945px] absolute 2xl:left-[1170px] 2xl:top-[68px] 2xl:z-999 md:w-[550px] md:left-110">
+        <img src="./assets/logo-main-content.svg" alt="Texto Valorant" class="absolute 2xl:left-[1800px] 2xl:top-[300px] md:-rotate-90 md:w-[90px] md:left-[480px] md:-top-15">
+        <div class="cards 2xl:w-[872px] 2xl:h-[120px] absolute 2xl:top-[900px] 2xl:left-[64px] flex justify-center items-center 2xl:gap-8 md:hidden">
             <div class="card 2xl:w-[260px] 2xl:h-[116px] bg-white flex justify-between items-center 2xl:p-3 z-50">
                 <div class="card-front 2xl:w-[260px] 2xl:h-[116px] border-2 border-solid border-[var(--red)] flex justify-between items-center 2xl:p-3 2xl:z-50 absolute 2xl:top-2 2xl:left-2">
                     <img src="./assets/viper.png" alt="Viper" class="2xl:size-[80px] relative 2xl:-left-5">
