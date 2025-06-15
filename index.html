@@ -29,25 +29,21 @@
         }
         
         .button:hover .bg-button {
-            opacity: 100%;
-        }
-        
-        .none {
-            display: none;
+            opacity: 100;
         }
     </style>
     <title>Riot Games | Valorant - KillJoy</title>
 </head>
 
-<body class="bg-[var(--color-bg)] flex flex-col h-screen">
-    <header class="">
-        <div class="logo">
-            <img src="./assets/logo-riot.svg" alt="Logo Riot" class="">
-            <div class=""></div>
-            <img src="./assets/logo-valorant.svg" alt="Logo Valorant" class="">
+<body class="bg-[var(--color-bg)] flex flex-col">
+    <header class="w-screen h-16 md:h-28 bg-[var(--red)] flex md:flex-col justify-between items-center p-4 md:p-0">
+        <div class="logo flex justify-center items-center gap-2 md:h-14 md:gap-4">
+            <img src="./assets/logo-riot.svg" alt="Logo Riot Games" class="w-16 md:w-24">
+            <div class="w-[2px] h-6 bg-black rounded-4xl md:h-8"></div>
+            <img src="./assets/logo-valorant.svg" alt="Logo Valorant" class="w-6 md:w-9">
         </div>
-        <nav class="">
-            <menu class="">
+        <nav class="hidden md:flex w-screen justify-center items-center border-black border-t-2 h-14">
+            <menu class="w-8/10 flex justify-between items-center font-poppins font-bold text-base">
                 <li>GAME</li>
                 <li>CHAMPION</li>
                 <li>DISCOVER</li>
@@ -57,14 +53,19 @@
                 <li>SUPORT</li>
             </menu>
         </nav>
+        <menu class="md:hidden">
+            <li><img src="./assets/menu-hamburguer.svg" alt="Menu"></li>
+        </menu>
     </header>
-    <main class="">
-        <div class="">
-            <div class="titulo">
+    <main class="h-[504px] md:h-[1254px] flex flex-col items-center bg-[url(./assets/bg-main.png)] bg-no-repeat bg-center bg-cover">
+        <img src="./assets/logo-main-content.svg" alt="Valorant" class="w-9 h-[241px] -rotate-90 relative -top-20 md:w-26 md:h-auto md:-top-60">
+        <img src="./assets/character-killjoy.png" alt="Personagem KillJoy" class="w-[220px] h-81 relative -top-36">
+        <div class="description hidden">
+            <div class="title">
                 <h1 class="">KILLJOY</h1>
                 <p class="">SENTINEL</p>
             </div>
-            <div class="descricao">
+            <div class="description-text">
                 <h2 class="">BIO...</h2>
                 <div class="">
                     <p>
@@ -81,13 +82,11 @@
                 </div>
             </div>
         </div>
-        <div class="button ">
-            <div class=""></div>
-            <h3 class="text-button">JOIN NOW</h3>
+        <div class="button relative -top-20">
+            <div class="bg-button w-[134px] bg-[var(--red)] h-[44px] absolute -z-50 -top-1 -left-1"></div>
+            <h3 class="text-button text-2xl font-semibold font-titulo text-white py-2 px-8 border-2 border-solid border-white leading-none z-50">JOIN NOW</h3>
         </div>
-        <img src="./assets/character-killjoy.png" alt="Personagem KillJoy" class="">
-        <img src="./assets/logo-main-content.svg" alt="Texto Valorant" class="">
-        <div class="cards">
+        <div class="cards hidden">
             <div class="card">
                 <div class="card-front">
                     <img src="./assets/viper.png" alt="Viper" class="">
