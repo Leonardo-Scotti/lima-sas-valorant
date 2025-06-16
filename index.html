@@ -29,7 +29,7 @@
         }
         
         .button:hover .bg-button {
-            opacity: 100;
+            opacity: 100%;
         }
     </style>
     <title>Riot Games | Valorant - KillJoy</title>
@@ -37,16 +37,16 @@
 
 <body class="bg-[var(--color-bg)] flex flex-col">
     <!-- ==========HEADER========== -->
-    <header class="w-screen h-16 md:h-28 bg-[var(--red)] flex md:flex-col justify-between items-center p-4 md:p-0 2xl:h-[100px] 2xl:flex-row 2xl:px-16 2xl:py-7">
+    <header class="w-screen h-16 md:h-28 bg-[var(--red)] flex md:flex-col justify-between items-center p-4 md:p-0 2xl:h-[100px] 2xl:flex-row 2xl:px-16 2xl:py-7 2xl:gap-20">
         <!-- LOGO -->
         <div class="logo flex justify-center items-center gap-2 md:h-14 md:gap-4 2xl:gap-10">
             <img src="./assets/logo-riot.svg" alt="Logo Riot Games" class="w-16 md:w-24 2xl:w-[165px]">
-            <div class="w-[2px] h-6 bg-black rounded-4xl md:h-8 2xl:h-screen 2xl:w-3"></div>
-            <img src="./assets/logo-valorant.svg" alt="Logo Valorant" class="w-6 md:w-9">
+            <div class="w-[2px] h-6 rounded-4xl md:h-8 2xl:w-1 2xl:h-16 bg-black rounded-2xl"></div>
+            <img src="./assets/logo-valorant.svg" alt="Logo Valorant" class="w-6 md:w-9 2xl:w-[66px]">
         </div>
         <!-- NAV E MENU -->
-        <nav class="hidden md:flex w-screen justify-center items-center border-black border-t-2 h-14 2xl:border-none 2xl:grow">
-            <menu class="w-8/10 flex justify-between items-center font-poppins font-bold text-base">
+        <nav class="hidden md:flex w-screen justify-center items-center border-black border-t-2 h-14 2xl:border-none 2xl:w-auto 2xl:grow 2xl:justify-start">
+            <menu class="w-8/10 flex justify-between items-center font-poppins font-bold text-base 2xl:justify-center 2xl:gap-8">
                 <li>GAME</li>
                 <li>CHAMPION</li>
                 <li>DISCOVER</li>
@@ -62,17 +62,17 @@
         </menu>
     </header>
     <!-- ==========MAIN========== -->
-    <main class="h-[504px] md:h-[1254px] flex flex-col items-center bg-[url(./assets/bg-main.png)] bg-no-repeat bg-center bg-cover md:grid md:grid-cols-[1fr_1fr] md:px-16">
+    <main class="h-[504px] md:h-[1254px] flex flex-col items-center bg-[url(./assets/bg-main.png)] bg-no-repeat bg-center bg-cover md:grid md:grid-cols-[1fr_1fr] md:px-16 2xl:grid-cols-[1fr_1fr_1fr]">
         <!-- IMG "VALORANT" -->
-        <img src="./assets/logo-main-content.svg" alt="Valorant" class="w-9 h-[241px] -rotate-90 relative -top-20 md:absolute md:w-26 md:h-auto md:-top-36 md:left-116 2xl:-rotate-0 2xl:left-440 2xl:top-100 2xl:w-21">
+        <img src="./assets/logo-main-content.svg" alt="Valorant" class="w-9 h-[241px] -rotate-90 relative -top-20 md:absolute md:w-26 md:h-auto md:-top-36 md:left-116 2xl:-rotate-0 2xl:left-440 2xl:top-66 2xl:w-21">
         <!-- IMG "PERSONAGEM KILLJOY" -->
-        <img src="./assets/character-killjoy.png" alt="Personagem KillJoy" class="w-[220px] h-81 relative -top-30 md:w-[550px] md:h-auto md:absolute md:top-90 md:left-110 -z-50 2xl:w-[648px] 2xl:left-280">
+        <img src="./assets/character-killjoy.png" alt="Personagem KillJoy" class="w-[220px] h-81 relative -top-30 md:w-[550px] md:h-auto md:absolute md:top-90 md:left-110 -z-50 2xl:w-[648px] 2xl:left-288 2xl:top-20 2xl:z-50">
         <!-- DESCRIÇÃO PERSONAGEM -->
-        <div class="description hidden md:flex flex-col md:w-[420px] md:mb-36 ml- z-50">
+        <div class="description hidden md:flex flex-col md:w-[420px] md:mb-36 ml- z-50  2xl:w-[600px] 2xl:relative 2xl:-top-42">
             <!-- TÍTULO -->
             <div class="title">
-                <h1 class="font-titulo md:text-[200px] font-extrabold text-[var(--red)] leading-none">KILLJOY</h1>
-                <p class="font-titulo md:text-[48px] font-extrabold text-white absolute md:top-118 md:left-90">SENTINEL</p>
+                <h1 class="font-titulo md:text-[200px] font-extrabold text-[var(--red)] leading-none 2xl:text-[260px]">KILLJOY</h1>
+                <p class="font-titulo md:text-[48px] font-extrabold text-white absolute md:top-118 md:left-90 2xl:text-6xl 2xl:top-40 2xl:left-100">SENTINEL</p>
             </div>
             <!-- DESCRIÇÃO -->
             <div class="description-text">
@@ -93,12 +93,14 @@
             </div>
         </div>
         <!-- BOTÃO "JOIN NOW" -->
-        <div class="button absolute top-140 md:top-260 md:left-40">
-            <div class="bg-button w-[134px] md:w-[200px] bg-[var(--red)] h-[44px] md:h-[68px] absolute -z-50 -top-1 -left-1"></div>
+        <div class="button absolute top-140 md:top-260 md:left-40 2xl:static flex justify-center items-center 2xl:mb-70">
+            <!-- FUNDO BOTÃO -->
+            <div class="bg-button w-[134px] md:w-[200px] bg-[var(--red)] h-[44px] md:h-[68px] absolute -z-50 -top-1 -left-1 2xl:w-[200px] 2xl:h-[60px] 2xl:top-137 2xl:left-214"></div>
+            <!-- ESCRITA BOTÃO -->
             <h3 class="text-button text-2xl md:text-5xl font-semibold font-titulo text-white border-2 border-solid border-white leading-none z-50 px-8 py-2">JOIN NOW</h3>
         </div>
         <!-- CARDS ATUALIZAÇÕES -->
-        <div class="cards hidden md:flex md:gap-[300px] md:absolute md:top-300">
+        <div class="cards hidden md:flex md:gap-[300px] md:absolute md:top-300 2xl:justify-between 2xl:w-[1000px] 2xl:gap-0 2xl:top-226">
             <!-- CARD -->
             <div class="card w-[270px] h-[126px] bg-white flex justify-between items-center z-50">
                 <div class="card-front w-[270px] h-[126px] border-2 border-solid border-[var(--red)] flex justify-between items-center p-3 z-50 relative top-2 left-2">
@@ -129,13 +131,13 @@
             <div class="card w-[270px] h-[126px] bg-white flex justify-between items-center z-50">
                 <div class="card-front w-[270px] h-[126px] border-2 border-solid border-[var(--red)] flex justify-between items-center p-3 z-50 relative top-2 left-2">
                     <!-- IMG PERSONAGEM -->
-                    <img src="./assets/viper.png" alt="Viper" class=" size-[80px] 2xl:size-[80px] relative -left-5">
+                    <img src="./assets/raze.png" alt="Raze" class=" size-[80px] 2xl:size-[80px] relative -left-5">
                     <!-- DESCRIÇÃO ATUALIZAÇÃO -->
                     <div class="card-descricao flex flex-col w-[130px]">
                         <!-- TÍTULO -->
-                        <h4 class="font-titulo text-[15px] font-bold">VALORANT PATCH NOTES <span class="text-[var(--red)]">3.03</span></h4>
+                        <h4 class="font-titulo text-[15px] font-bold">VALORANT PATCH NOTES <span class="text-[var(--red)]">3.02</span></h4>
                         <!-- DESCRIÇÃO -->
-                        <p class="font-poppins text-[10px]">Hey! Let’s start with a quick note on Yoru from our Character Producer, John Goscicki:</p>
+                        <p class="font-poppins text-[10px]">More bug fixes in this patch while we continue to evaluate those large Episode 3 </p>
                         <!-- RODAPÉ DO CARD -->
                         <div class="card-footer flex justify-between">
                             <!-- REDES SOCIAIS -->
@@ -152,26 +154,26 @@
                 </div>
             </div>
             <!-- CARD -->
-            <div class="card md:hidden">
-                <div class="card-front">
+            <div class="card w-[270px] h-[126px] bg-white justify-between items-center z-50 md:hidden 2xl:flex">
+                <div class="card-front w-[270px] h-[126px] border-2 border-solid border-[var(--red)] flex justify-between items-center p-3 z-50 relative top-2 left-2">
                     <!-- IMG PERSONAGEM -->
-                    <img src="./assets/viper.png" alt="Viper" class="">
+                    <img src="./assets/kayo.png" alt="Kayo" class=" size-[80px] 2xl:size-[80px] relative -left-5">
                     <!-- DESCRIÇÃO ATUALIZAÇÃO -->
-                    <div class="card-descricao">
+                    <div class="card-descricao flex flex-col w-[130px]">
                         <!-- TÍTULO -->
-                        <h4 class="font-titulo">VALORANT PATCH NOTES 3.03</h4>
+                        <h4 class="font-titulo text-[15px] font-bold">VALORANT PATCH NOTES <span class="text-[var(--red)]">3.01</span></h4>
                         <!-- DESCRIÇÃO -->
-                        <p class="">Hey! Let’s start with a quick note on Yoru from our Character Producer, John Goscicki:</p>
+                        <p class="font-poppins text-[10px]">Patch 3.0 was like an over-sized meal, where now we sit and let the food settle. </p>
                         <!-- RODAPÉ DO CARD -->
-                        <div class="card-footer">
+                        <div class="card-footer flex justify-between">
                             <!-- REDES SOCIAIS -->
-                            <div class="social">
-                                <img src="./assets/iconmonstr-reddit-1.svg" alt="Reddit" class="">
-                                <img src="./assets/iconmonstr-twitter-1.svg" alt="Twitter" class="">
+                            <div class="social flex justify-center items-center gap-3">
+                                <img src="./assets/iconmonstr-reddit-1.svg" alt="Reddit" class="size-4 ">
+                                <img src="./assets/iconmonstr-twitter-1.svg" alt="Twitter" class="size-4">
                             </div>
                             <!-- VER MAIS -->
                             <a href="#">
-                                <h6>SEE MORE <span>+</span></h6>
+                                <h6 class="font-titulo font-bold text-[15px]">SEE MORE <span class="text-[var(--red)]">+</span></h6>
                             </a>
                         </div>
                     </div>
