@@ -36,13 +36,16 @@
 </head>
 
 <body class="bg-[var(--color-bg)] flex flex-col">
-    <header class="w-screen h-16 md:h-28 bg-[var(--red)] flex md:flex-col justify-between items-center p-4 md:p-0">
-        <div class="logo flex justify-center items-center gap-2 md:h-14 md:gap-4">
-            <img src="./assets/logo-riot.svg" alt="Logo Riot Games" class="w-16 md:w-24">
-            <div class="w-[2px] h-6 bg-black rounded-4xl md:h-8"></div>
+    <!-- ==========HEADER========== -->
+    <header class="w-screen h-16 md:h-28 bg-[var(--red)] flex md:flex-col justify-between items-center p-4 md:p-0 2xl:h-[100px] 2xl:flex-row 2xl:px-16 2xl:py-7">
+        <!-- LOGO -->
+        <div class="logo flex justify-center items-center gap-2 md:h-14 md:gap-4 2xl:gap-10">
+            <img src="./assets/logo-riot.svg" alt="Logo Riot Games" class="w-16 md:w-24 2xl:w-[165px]">
+            <div class="w-[2px] h-6 bg-black rounded-4xl md:h-8 2xl:h-screen 2xl:w-3"></div>
             <img src="./assets/logo-valorant.svg" alt="Logo Valorant" class="w-6 md:w-9">
         </div>
-        <nav class="hidden md:flex w-screen justify-center items-center border-black border-t-2 h-14">
+        <!-- NAV E MENU -->
+        <nav class="hidden md:flex w-screen justify-center items-center border-black border-t-2 h-14 2xl:border-none 2xl:grow">
             <menu class="w-8/10 flex justify-between items-center font-poppins font-bold text-base">
                 <li>GAME</li>
                 <li>CHAMPION</li>
@@ -53,21 +56,28 @@
                 <li>SUPORT</li>
             </menu>
         </nav>
+        <!-- MENU MOBILE -->
         <menu class="md:hidden">
             <li><img src="./assets/menu-hamburguer.svg" alt="Menu"></li>
         </menu>
     </header>
-    <main class="h-[504px] md:h-[1254px] flex flex-col items-center bg-[url(./assets/bg-main.png)] bg-no-repeat bg-center bg-cover">
-        <img src="./assets/logo-main-content.svg" alt="Valorant" class="w-9 h-[241px] -rotate-90 relative -top-20 md:w-26 md:h-auto md:-top-60">
-        <img src="./assets/character-killjoy.png" alt="Personagem KillJoy" class="w-[220px] h-81 relative -top-36">
-        <div class="description hidden">
+    <!-- ==========MAIN========== -->
+    <main class="h-[504px] md:h-[1254px] flex flex-col items-center bg-[url(./assets/bg-main.png)] bg-no-repeat bg-center bg-cover md:grid md:grid-cols-[1fr_1fr] md:px-16">
+        <!-- IMG "VALORANT" -->
+        <img src="./assets/logo-main-content.svg" alt="Valorant" class="w-9 h-[241px] -rotate-90 relative -top-20 md:absolute md:w-26 md:h-auto md:-top-36 md:left-116 2xl:-rotate-0 2xl:left-440 2xl:top-100 2xl:w-21">
+        <!-- IMG "PERSONAGEM KILLJOY" -->
+        <img src="./assets/character-killjoy.png" alt="Personagem KillJoy" class="w-[220px] h-81 relative -top-30 md:w-[550px] md:h-auto md:absolute md:top-90 md:left-110 -z-50 2xl:w-[648px] 2xl:left-280">
+        <!-- DESCRIÇÃO PERSONAGEM -->
+        <div class="description hidden md:flex flex-col md:w-[420px] md:mb-36 ml- z-50">
+            <!-- TÍTULO -->
             <div class="title">
-                <h1 class="">KILLJOY</h1>
-                <p class="">SENTINEL</p>
+                <h1 class="font-titulo md:text-[200px] font-extrabold text-[var(--red)] leading-none">KILLJOY</h1>
+                <p class="font-titulo md:text-[48px] font-extrabold text-white absolute md:top-118 md:left-90">SENTINEL</p>
             </div>
+            <!-- DESCRIÇÃO -->
             <div class="description-text">
-                <h2 class="">BIO...</h2>
-                <div class="">
+                <h2 class="font-titulo md:text-[48px] font-extrabold text-white">BIO...</h2>
+                <div class="font-poppins font-normal text-xl text-white flex flex-col md:gap-6">
                     <p>
                         Killjoy, uma alemã genial, defende o campo de batalha facilmente usando seu arsenal de invenções. Se o dano causado por seu equipamento não der cabo dos inimigos, os efeitos negativos de seus queridos robôs dão conta do recado.
                     </p>
@@ -82,64 +92,87 @@
                 </div>
             </div>
         </div>
-        <div class="button relative -top-20">
-            <div class="bg-button w-[134px] bg-[var(--red)] h-[44px] absolute -z-50 -top-1 -left-1"></div>
-            <h3 class="text-button text-2xl font-semibold font-titulo text-white py-2 px-8 border-2 border-solid border-white leading-none z-50">JOIN NOW</h3>
+        <!-- BOTÃO "JOIN NOW" -->
+        <div class="button absolute top-140 md:top-260 md:left-40">
+            <div class="bg-button w-[134px] md:w-[200px] bg-[var(--red)] h-[44px] md:h-[68px] absolute -z-50 -top-1 -left-1"></div>
+            <h3 class="text-button text-2xl md:text-5xl font-semibold font-titulo text-white border-2 border-solid border-white leading-none z-50 px-8 py-2">JOIN NOW</h3>
         </div>
-        <div class="cards hidden">
-            <div class="card">
-                <div class="card-front">
-                    <img src="./assets/viper.png" alt="Viper" class="">
-                    <div class="card-descricao">
-                        <h4 class="">VALORANT PATCH NOTES 3.03</h4>
-                        <p class="">Hey! Let’s start with a quick note on Yoru from our Character Producer, John Goscicki:</p>
-                        <div class="card-footer">
-                            <div class="social">
-                                <img src="./assets/iconmonstr-reddit-1.svg" alt="Reddit" class="">
-                                <img src="./assets/iconmonstr-twitter-1.svg" alt="Twitter" class="">
+        <!-- CARDS ATUALIZAÇÕES -->
+        <div class="cards hidden md:flex md:gap-[300px] md:absolute md:top-300">
+            <!-- CARD -->
+            <div class="card w-[270px] h-[126px] bg-white flex justify-between items-center z-50">
+                <div class="card-front w-[270px] h-[126px] border-2 border-solid border-[var(--red)] flex justify-between items-center p-3 z-50 relative top-2 left-2">
+                    <!-- IMG PERSONAGEM -->
+                    <img src="./assets/viper.png" alt="Viper" class=" size-[80px] relative -left-5">
+                    <!-- DESCRIÇÃO ATUALIZAÇÃO -->
+                    <div class="card-descricao flex flex-col w-[130px]">
+                        <!-- TÍTULO -->
+                        <h4 class="font-titulo text-[15px] font-bold">VALORANT PATCH NOTES <span class="text-[var(--red)]">3.03</span></h4>
+                        <!-- DESCRIÇÃO -->
+                        <p class="font-poppins text-[10px]">Hey! Let’s start with a quick note on Yoru from our Character Producer, John Goscicki:</p>
+                        <!-- RODAPÉ DO CARD -->
+                        <div class="card-footer flex justify-between">
+                            <!-- REDES SOCIAIS -->
+                            <div class="social flex justify-center items-center gap-3">
+                                <img src="./assets/iconmonstr-reddit-1.svg" alt="Reddit" class="size-4 ">
+                                <img src="./assets/iconmonstr-twitter-1.svg" alt="Twitter" class="size-4">
                             </div>
-                            <div class="see-more">
-                                <h5 class="">SEE MORE</h5>
-                                <span class="">+</span>
-                            </div>
+                            <!-- VER MAIS -->
+                            <a href="#">
+                                <h6 class="font-titulo font-bold text-[15px]">SEE MORE <span class="text-[var(--red)]">+</span></h6>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-front ">
-                    <img src="./assets/raze.png" alt="Viper" class="">
-                    <div class="card-descricao">
-                        <h4 class="font-titulo">VALORANT PATCH NOTES 3.02</h4>
-                        <p class="">More bug fixes in this patch while we continue to evaluate those large Episode 3</p>
-                        <div class="card-footer">
-                            <div class="social">
-                                <img src="./assets/iconmonstr-reddit-1.svg" alt="Reddit" class="">
-                                <img src="./assets/iconmonstr-twitter-1.svg" alt="Twitter" class="">
+            <!-- CARD -->
+            <div class="card w-[270px] h-[126px] bg-white flex justify-between items-center z-50">
+                <div class="card-front w-[270px] h-[126px] border-2 border-solid border-[var(--red)] flex justify-between items-center p-3 z-50 relative top-2 left-2">
+                    <!-- IMG PERSONAGEM -->
+                    <img src="./assets/viper.png" alt="Viper" class=" size-[80px] 2xl:size-[80px] relative -left-5">
+                    <!-- DESCRIÇÃO ATUALIZAÇÃO -->
+                    <div class="card-descricao flex flex-col w-[130px]">
+                        <!-- TÍTULO -->
+                        <h4 class="font-titulo text-[15px] font-bold">VALORANT PATCH NOTES <span class="text-[var(--red)]">3.03</span></h4>
+                        <!-- DESCRIÇÃO -->
+                        <p class="font-poppins text-[10px]">Hey! Let’s start with a quick note on Yoru from our Character Producer, John Goscicki:</p>
+                        <!-- RODAPÉ DO CARD -->
+                        <div class="card-footer flex justify-between">
+                            <!-- REDES SOCIAIS -->
+                            <div class="social flex justify-center items-center gap-3">
+                                <img src="./assets/iconmonstr-reddit-1.svg" alt="Reddit" class="size-4 ">
+                                <img src="./assets/iconmonstr-twitter-1.svg" alt="Twitter" class="size-4">
                             </div>
-                            <div class="see-more">
-                                <h5 class="">SEE MORE</h5>
-                                <span class="">+</span>
-                            </div>
+                            <!-- VER MAIS -->
+                            <a href="#">
+                                <h6 class="font-titulo font-bold text-[15px]">SEE MORE <span class="text-[var(--red)]">+</span></h6>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="card">
+            <!-- CARD -->
+            <div class="card md:hidden">
                 <div class="card-front">
+                    <!-- IMG PERSONAGEM -->
                     <img src="./assets/viper.png" alt="Viper" class="">
+                    <!-- DESCRIÇÃO ATUALIZAÇÃO -->
                     <div class="card-descricao">
+                        <!-- TÍTULO -->
                         <h4 class="font-titulo">VALORANT PATCH NOTES 3.03</h4>
+                        <!-- DESCRIÇÃO -->
                         <p class="">Hey! Let’s start with a quick note on Yoru from our Character Producer, John Goscicki:</p>
+                        <!-- RODAPÉ DO CARD -->
                         <div class="card-footer">
+                            <!-- REDES SOCIAIS -->
                             <div class="social">
                                 <img src="./assets/iconmonstr-reddit-1.svg" alt="Reddit" class="">
                                 <img src="./assets/iconmonstr-twitter-1.svg" alt="Twitter" class="">
                             </div>
-                            <div class="see-more">
-                                <h5 class="">SEE MORE</h5>
-                                <span class="">+</span>
-                            </div>
+                            <!-- VER MAIS -->
+                            <a href="#">
+                                <h6>SEE MORE <span>+</span></h6>
+                            </a>
                         </div>
                     </div>
                 </div>
