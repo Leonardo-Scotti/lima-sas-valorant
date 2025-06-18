@@ -5,7 +5,7 @@ Este projeto foi desenvolvido para a atividade final do 1º semestre do curso T�
 Após fazer a prototipação das novas telas, chegou a hora da programação. Foi requisitado que o peojeto fosse desenvolvido usando o framework TailWind, e assim o fiz.
 
 ## Como executar o projeto
-Para executar este projeto, basta clicar no link que está na aba de Descrição do repositório. Ou clicando [aqui!](https://leonardo-scotti.github.io/lima-sas-valorant/)
+Para executar este projeto, basta clicar no link que está na aba de Descrição do repositório. Ou clicando [aqui!](https://leonardo-scotti.github.io/lima-sas-valorant/ target="_blank")
 
 ## Prototipação
-Para ter acesso a prototipação, basta acessar este [link](https://www.figma.com/design/yaCjuWWJZFOYg01BAtW2Zn/lima-atividade-valorant--Copy-?node-id=0-1&t=dEFnjmlHWStKqST7-1)
+Para ter acesso a prototipação, basta acessar este [link!](https://www.figma.com/design/yaCjuWWJZFOYg01BAtW2Zn/lima-atividade-valorant--Copy-?node-id=0-1&t=dEFnjmlHWStKqST7-1)
